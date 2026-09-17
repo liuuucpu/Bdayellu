@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Mymuna Islam Elma — 24 🎂</title>
+<meta name="description" content="A chaotic birthday room for Mymuna Islam Elma.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<div class="noise"></div><div id="confetti"></div>
+<main>
+<section class="hero card">
+<div class="sticker">★</div><div class="eyebrow">15 OCTOBER • LEVEL 24 UNLOCKED</div>
+<h1>HAPPY BIRTHDAY,<br><span>MYMUNA.</span></h1>
+<p>Warning: Elma has officially reached 24. Side effects may include chaos, questionable decisions and an unreasonable amount of cake.</p>
+<button class="primary" id="startBtn">ENTER THE CHAOS →</button>
+<div class="tiny">best experienced with sound on 🔊</div>
+</section>
+
+<section class="room" id="room">
+<div class="section-head"><div><span class="eyebrow">THE BIRTHDAY ROOM</span><h2>click literally everything.</h2></div><div class="counter" id="memoryCounter">loading…</div></div>
+<div class="interactive-grid">
+<button class="object" data-modal="giftModal">🎁<small>DO NOT OPEN</small></button>
+<button class="object" data-modal="cakeModal">🎂<small>MAKE A WISH</small></button>
+<button class="object" data-modal="phoneModal">📱<small>EMERGENCY</small></button>
+<button class="object wide" data-modal="uploadModal">📸<small>UPLOAD EVIDENCE</small></button>
+<button class="object" data-modal="messageModal">💌<small>WRITE SOMETHING</small></button>
+<button class="object wide" id="discoBtn">🪩<small>CHAOS MODE</small></button>
+</div>
+<div class="ticker"><span>🚨 IMPORTANT ANNOUNCEMENT: ELMA IS 24 🚨 • PLEASE ACT NORMAL • NO ONE IS ACTING NORMAL • </span></div>
+
+<section class="memories card">
+<div class="section-head"><div><span class="eyebrow">THE WALL</span><h2>receipts & messages</h2></div><button class="secondary" data-modal="messageModal">+ add message</button></div>
+<div id="status" class="status"></div><div id="memoryWall" class="memory-wall"></div>
+</section>
+</section>
+<footer>made with questionable amounts of love for Mymuna Islam Elma • 15.10 • 24 ✦</footer>
+</main>
+
+<dialog id="giftModal"><button class="close" data-close>×</button><div class="modal-icon">🎁</div><h3>You opened it.</h3><p>Congratulations. Your prize is absolutely nothing.</p><p class="quote">“The real gift was the emotional damage we collected along the way.”</p><button class="primary" data-close>acceptable.</button></dialog>
+
+<dialog id="cakeModal"><button class="close" data-close>×</button><div class="modal-icon">🎂</div><h3>Make a wish, Elma.</h3><p>Now blow out the candles.</p><button class="primary" id="blowBtn">BLOW 💨</button><p id="wishResult" class="quote hidden">🎉 THE CANDLES ARE OUT. THE CHAOS REMAINS.</p></dialog>
+
+<dialog id="phoneModal"><button class="close" data-close>×</button><div class="modal-icon">📱</div><h3>EMERGENCY HOTLINE</h3><p>Press only if Elma says, “I’m going to be responsible now.”</p><button class="primary" id="panicBtn">CALL THE GROUP CHAT</button><p id="panicResult" class="quote hidden">📞 No answer. Everyone is probably creating another bad memory.</p></dialog>
+
+<dialog id="messageModal"><button class="close" data-close>×</button><div class="modal-icon">💌</div><h3>Leave Elma a message</h3>
+<form id="messageForm"><label>Your name<input name="name" maxlength="50" required placeholder="e.g. Sadia"></label><label>Birthday message<textarea name="message" maxlength="500" required placeholder="Say something she'll remember…"></textarea></label><button class="primary" type="submit">POST IT ✦</button></form><p class="form-note">Your message will be visible to everyone who has the link.</p></dialog>
+
+<dialog id="uploadModal"><button class="close" data-close>×</button><div class="modal-icon">📸</div><h3>Upload evidence</h3><p>Drop a photo from your Elma archives.</p>
+<form id="uploadForm"><label>Your name<input name="name" maxlength="50" required placeholder="e.g. Sadia"></label><label>Photo<input name="photo" type="file" accept="image/jpeg,image/png,image/webp,image/gif" required></label><label>Caption<input name="caption" maxlength="120" placeholder="The night everything went wrong…"></label><button class="primary" type="submit">ADD TO WALL ✦</button></form><p class="form-note">Images are limited to 8 MB.</p></dialog>
+<script src="config.js"></script><script src="app.js"></script>
+</body></html>
